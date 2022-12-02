@@ -1,0 +1,28 @@
+<div class="container">
+  
+
+    <form [formGroup]="profileForm" (ngSubmit)="OnSubmit()">
+
+        <label for="first-name">First Name: </label>
+        <input id="first-name" type="text" formControlName="firstName" class="form-control">
+      
+        <div formGroupName="address">
+           
+          
+            <label for="email">Email: </label>
+            <input id="email" type="text" formControlName="email" class="form-control">
+          
+           
+          </div>
+
+          
+
+          <button type="button" (click)="updateProfile()">Update Profile</button>
+    
+    
+        <p>Complete the form to enable button.</p>
+        <button class="vtn btn-secondary" type="submit" [disabled]="!profileForm.valid">Submit</button>
+      
+      </form>
+    
+</div>
